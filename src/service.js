@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = "https://localhost:7170";
+axios.defaults.baseURL = process.env.REACT_APP_API;
 
 axios.interceptors.response.use(function (response) {
   console.log(`intercaption ${response.statusText}`);
